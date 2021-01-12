@@ -23,7 +23,7 @@ app = Flask(__name__)
 MODEL_PATH = 'models/model_resnet.h5'
 print(" MODEL_PATH :",MODEL_PATH)
 
-
+'''
 def model_predict(img_path, model):
     img = image.load_img(img_path, target_size=(224, 224))
 
@@ -38,14 +38,14 @@ def model_predict(img_path, model):
 
     preds = model.predict(x)
     return preds
-
+'''
 
 @app.route('/', methods=['GET'])
 def index():
     # Main page
     return render_template('index.html')
 
-
+'''
 @app.route('/predict', methods=['GET', 'POST'])
 def upload():
     if request.method == 'POST':
@@ -77,7 +77,7 @@ def upload():
     elif request.method == 'GET':
         return render_template('index.html')
     return None
-
+'''
 
 if __name__ == '__main__':
     print('*** App Started ***')
