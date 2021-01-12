@@ -3,12 +3,12 @@
 h2 {text-align: center;}
 p {text-align: center;}
 </style>
-<h2>you invoked @app.route('/', methods=['GET'])</h2>
+<h2>Classification</h2>
 
 <div>
     <form align="center" id="upload-file" method="post" enctype="multipart/form-data">
         <label for="imageUpload" class="upload-label">
-            currrently my app.py is routing to sample page but in case of real adapter it will invoke needed biz. logic
+            Select
         </label>
         <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
     </form>
@@ -18,7 +18,9 @@ p {text-align: center;}
             <div id="imagePreview">
             </div>
         </div>
-       
+        <div>
+            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+        </div>
     </div>
 
     <div class="loader" style="display:none;"></div>
